@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AcaoComponent from "../../components/AcaoComponent";
+import B3Logo from "../../assets/B3.png";
 import { Form, Alert } from "react-bootstrap";
 
 const PaginaInicial = () => {
@@ -20,6 +21,7 @@ const PaginaInicial = () => {
 
   return (
     <div className="pagina-inicial">
+      <img src={B3Logo} alt="Logo B3" style={{ width: "600px", borderRadius: "5px", marginBottom: "100px" }} />
       <div className="acao-input">
         <Form.Label><b>Código da Ação:</b></Form.Label>
         <Form.Control style={{ width: "650px" }}
