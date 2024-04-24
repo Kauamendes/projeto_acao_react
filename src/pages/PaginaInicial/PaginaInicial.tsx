@@ -9,10 +9,9 @@ const PaginaInicial = () => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputCodigo = event.target.value.toUpperCase();
-    // Verifica se o código de ação tem um dos formatos especificados
     if (/^[A-Z]{4}[0-9]+$/.test(inputCodigo)) {
       setCodigoAcao(inputCodigo);
-      setError(null); // Limpa a mensagem de erro se o código for válido
+      setError(null);
     } else {
       setCodigoAcao(inputCodigo);
       setError("Código de ação inválido. Por favor, insira um código válido.");
@@ -24,7 +23,7 @@ const PaginaInicial = () => {
       <img src={B3Logo} alt="Logo B3" style={{ width: "600px", borderRadius: "5px", marginBottom: "100px" }} />
       <div className="acao-input">
         <Form.Label><b>Código da Ação:</b></Form.Label>
-        <Form.Control style={{ width: "650px" }}
+        <Form.Control style={{ width: "800px" }}
           size="lg"
           placeholder="Digite o código da ação (Exemplo: PETR4, BOVA11)"
           type="text"
@@ -33,7 +32,7 @@ const PaginaInicial = () => {
         />
         {error && <Alert variant="danger">{error}</Alert>}
       </div>
-      {codigoAcao && !error && <AcaoComponent codigo={codigoAcao} />}
+      {codigoAcao && !error && <AcaoComponent symbol={codigoAcao} />}
     </div>
   );
 };

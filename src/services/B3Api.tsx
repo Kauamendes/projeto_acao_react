@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://g183k2nx-7029.brs.devtunnels.ms/Share";
+const baseURL = "https://rvh98qbf-44321.brs.devtunnels.ms/Share";
 
 const mercadoServiceApi = axios.create({
     baseURL: baseURL,
